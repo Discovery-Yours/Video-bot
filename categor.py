@@ -48,6 +48,4 @@ def categor(msg):
         return prc
 
 
-while True:
-    print(categor(input(':')))
 
