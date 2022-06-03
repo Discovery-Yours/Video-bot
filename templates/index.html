@@ -15,7 +15,7 @@
             <div id="chatbox" class="border border-success">
                 <p class="botText"><span>Start!</span></p>
             </div>
-            <iframe id="video" width="540" height="315" src="static/1.mp4" frameborder="0"></iframe>
+            <iframe id="video" width="540" height="315" src="{{ result }}" frameborder="0"></iframe>
             <div id="userInput">
                 <input id="textInput" class="form-control" type="text" name="msg" placeholder="Type Your Message Here">
                 <input id="buttonInput" class="btn btn-success form-control" type="submit" value="Send">
@@ -29,7 +29,7 @@
         let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
 
-        if (userText == "пальмы") {
+        /*if (userText == "пальмы") {
             document.getElementById("video").src="static/1.mp4";
         }
         else if (userText == "море") {
@@ -37,7 +37,7 @@
         }
         else {
             document.getElementById("video").src="static/3.mp4";
-        }
+        }*/
 
         $("#textInput").val("");
         $("#chatbox").append(userHtml);

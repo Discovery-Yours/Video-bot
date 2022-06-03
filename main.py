@@ -17,18 +17,20 @@ def get_bot_response():
 if __name__ == "__main__":
     app.run()
 '''
-from categor import opts,cmds,categor_cmds,categor
-from flask import Flask, render_template, request
+from categor import opts, cmds, categor_cmds, categor
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    result = ' '
+    return render_template("index.html", result=result)
 
 @app.route("/get")
 def get_bot_response():
-    print(request.args.get('msg'))
+    result = request.args.get('msg')
+    return redirect(url_for('index', result=result))
 
 
 if __name__ == "__main__":
