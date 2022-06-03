@@ -26,8 +26,8 @@ def index():
 
 @app.route("/get")
 def get_bot_response():
-    userText = request.args.get('msg')
-    return str(userText)
+    print(request.args.get('msg'))
+
 
 if __name__ == "__main__":
     app.run()
