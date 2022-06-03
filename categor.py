@@ -48,6 +48,6 @@ def categor(msg):
         return '0'
 
 
-while True:
-    print(categor(input(':')))
+# while True:
+#     print(categor(input(':')))
 
